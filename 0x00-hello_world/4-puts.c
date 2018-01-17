@@ -1,8 +1,9 @@
 #include <stdio.h>
-/*
- *main - prints string
- *return - will pass 0 for success
- *Description - Printing line - "Programming is like builing a multilingual puzzle
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ * Description - Printing lines
  */
 int main(void)
 {
