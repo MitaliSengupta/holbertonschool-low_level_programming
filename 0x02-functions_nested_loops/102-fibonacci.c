@@ -14,13 +14,13 @@ int main(void)
 
 	printf("%lu, ", a);
 	printf("%lu, ", b);
-	for (count = 3; count <50; count++)
+
+	for (count = 3; count <= 50; count++)
 	{
 		c = a + b;
 		a = b;
 		b = c;
-
-		if( count < 49)
+		if (count < 49)
 		{
 			printf("%lu, ", c);
 		}
@@ -31,4 +31,3 @@ int main(void)
 	}
 	return (0);
 }
-		
