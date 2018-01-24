@@ -1,5 +1,5 @@
 #include "holberton.h"
-#inclue <stdio.h>
+
 /**
  * print_times_table - function to print tables
  * @n : integer values
@@ -9,7 +9,7 @@ void print_times_table(int n)
 {
 	int a, b, c;
 
-	if (n >= 15 || n <= 0)
+	if (n > 15 || n <= 0)
 		return;
 	for (a = 0; a <= n; a++)
 	{
