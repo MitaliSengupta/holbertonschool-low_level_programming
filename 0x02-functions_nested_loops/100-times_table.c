@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#inclue <stdio.h>
 /**
  * print_times_table - function to print tables
  * @n : integer values
