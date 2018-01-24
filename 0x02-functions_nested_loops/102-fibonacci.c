@@ -20,7 +20,7 @@ int main(void)
 		c = a + b;
 		a = b;
 		b = c;
-		if (count < 48)
+		if (count < 50)
 		{
 			printf("%lu, ", c);
 		}
