@@ -3,7 +3,7 @@
 /**
  * print_triangle - function to print symbols in triangle
  *
- * Return: Always 0.
+ * @size : integer value
  */
 void print_triangle(int size)
 {
