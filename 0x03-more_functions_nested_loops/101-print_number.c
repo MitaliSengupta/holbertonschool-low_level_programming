@@ -17,12 +17,8 @@ void print_number(int n)
 		a = a * -1;
 		_putchar('-');
 	}
-	else if (n == 0)
-	{
-		_putchar(a + '0');
-	}
-
 	tmp = a;
+
 	while (tmp > 0)
 	{
 		b++;
@@ -30,9 +26,10 @@ void print_number(int n)
 	}
 	for (count = 1; count < b; count++)
 		pow = pow * 10;
+
 	while (pow > 1)
 	{
-		_putchar((a / pow) % 10);
+		_putchar((a / pow) % 10 + '0');
 			pow = pow / 10;
 	}
 	_putchar(a % 10 + '0');
