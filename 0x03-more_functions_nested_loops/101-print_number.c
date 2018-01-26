@@ -19,7 +19,7 @@ void print_number(int n)
 	}
 	tmp = a;
 
-	while (tmp > 0)
+	while (tmp > 9)
 	{
 		b++;
 		tmp = tmp / 10;
