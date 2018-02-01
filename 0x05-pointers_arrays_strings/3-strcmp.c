@@ -11,13 +11,16 @@ int _strcmp(char *s1, char *s2)
 	int a, b;
 
 	for (a = 0; s1[a] != '\0'; a++)
-		;
-	for (b = 0; s2[b] != '\0'; b++)
-		;
-	if (a == b)
-		return (0);
-	else if (a < b)
-		return (a - b);
-	else
-		return (a - b);
+	{
+		for (b = 0; s2[b] != '\0'; b++)
+		{
+			if (s1[a] < s2[b])
+				return (s1[a] - s2[b]);
+			else if (s1[a] > s2[b])
+				return (s1[a] - s2[b]);
+			else
+				return (s1[a] - s1[a]);
+		}
+	}
+	return (0);
 }
