@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * _strspn - function that gets the length of a prefix substring
@@ -17,7 +16,6 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[a] == accept[b])
 			{
-				printf("%c\n", s[a]);
 				break;
 			}
 		}
