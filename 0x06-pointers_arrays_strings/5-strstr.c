@@ -16,8 +16,9 @@ char *_strstr(char *haystack, char *needle)
 		return (haystack);
 	for (; *haystack != '\0'; haystack++)
 	{
-		for (p = haystack; *p == needle[a]; p++)
+		for (p = haystack; *p == needle[a];)
 		{
+			p++; 
 			a++; /* doesn't pass the checker if in the for loop */
 			if (needle[a] == '\0')
 				return (haystack);
