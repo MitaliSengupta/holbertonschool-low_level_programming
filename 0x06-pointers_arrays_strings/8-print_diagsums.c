@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdio.h>
-
 /**
  * print_diagsum - printing the sum of two diagonals
  * @a: array values
