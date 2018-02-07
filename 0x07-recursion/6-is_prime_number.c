@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * prime_var - checking for prime n against each variable
+ * @n: integer value being passed for checking
+ * @var: variable being tested against for checking prime
+ * Return: Always 1 if prime 0 if not
  */
 int prime_var(int n, int var)
 {
@@ -14,6 +15,11 @@ int prime_var(int n, int var)
 	return (prime_var(n, var + 1));
 }
 
+/**
+ * is_prime_number - function to test the input integer as prime
+ * @n: integer value being passed to check for prime
+ * Return: Always 0.
+ */
 int is_prime_number(int n)
 {
 	if (n == 0)
