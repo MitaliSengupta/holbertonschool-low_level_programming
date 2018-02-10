@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 {
 	int a = 0, b = 0, multiplication;
 
-	if (argc < 3)
+	if (argc < 2)
 	{
 		printf("ERROR\n");
 		return (1);
