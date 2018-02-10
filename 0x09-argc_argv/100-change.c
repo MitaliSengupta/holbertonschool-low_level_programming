@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main( int argc, char **argv)
+/**
+ * main - function to print out the change that needs to given
+ * @argc: number of arguments to be passed
+ * @argv: number of variables to calculate
+ * Return: always 0 for sucess
+ */
+
+int main(int argc, char **argv)
 {
 	int total, change;
 
