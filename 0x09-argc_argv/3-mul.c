@@ -9,9 +9,9 @@
  */
 int main(int argc, char **argv)
 {
-	int a, b, multiplication;
+	int a = 0, b = 0, multiplication;
 
-	if (argc <= 2)
+	if (argc < 3)
 	{
 		printf("ERROR\n");
 		return (1);
