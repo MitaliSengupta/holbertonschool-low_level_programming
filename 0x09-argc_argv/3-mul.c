@@ -5,7 +5,7 @@
  * main - function to print multiplication result
  * @argc: number of arguments
  * @argv: arguments supplied
- * Return: always 1 if more than or less than two arg var supplied otherwise 0.
+ * Return: always 1 if less than two arg var supplied otherwise 0.
  */
 int main(int argc, char **argv)
 {
@@ -17,9 +17,9 @@ int main(int argc, char **argv)
 		b = atoi(argv[2]);
 		printf("%d\n", a * b);
 	}
-	else if (argc < 3)
+	else
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 	}
 	return (0);
 }
