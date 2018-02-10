@@ -9,16 +9,15 @@
  */
 int main(int argc, char **argv)
 {
-	int a = 0, b = 0, multiplication;
+	int a = 0, b = 0;
 
-	if (argc < 2)
+	if (argc < 3)
 	{
 		printf("ERROR\n");
 		return (1);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[2]);
-	multiplication = a * b;
-	printf("%d\n", multiplication);
+	printf("%d\n", a * b);
 	return (0);
 }
