@@ -3,9 +3,10 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * free_grid - freeing matrix
+ * @grid: matrix being passed
+ * @height: freeing using this variable
+ * Return: nothing
  */
 void free_grid(int **grid, int height)
 {
