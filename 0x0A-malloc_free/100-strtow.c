@@ -14,12 +14,12 @@ int number(char *str)
 
 	for (a = 0; str[a] != '\0'; a++)
 	{
-		if (str[a] == ' ')
-			a++;
+		if (*str == ' ')
+			str++;
 		else
 		{
-			for (; str[a] == ' '; a++)
-				;
+			for (; str[a] != ' ' && str[a] != '\0'; a++)
+				str++;
 			num++;
 		}
 	}
@@ -44,7 +44,7 @@ void free_everything(char **string, int i)
  */
 char **strtow(char *str)
 {
-	int total_words = 0, a = 0, b = 0, c = 0, length = 0;
+	int total_words = 0, b = 0, c = 0, length = 0;
 	char **words, *found_word;
 
 	if (str == 0 || *str == 0)
@@ -55,14 +55,14 @@ char **strtow(char *str)
 	words = malloc((total_words + 1) * sizeof(char *));
 	if (words == 0)
 		return (NULL);
-	for (; str[a] != '\0' &&  b < total_words;)
+	for (; *str != '\0' &&  b < total_words;)
 	{
-		if (str[a] == ' ')
+		if (*str == ' ')
 			str++;
 		else
 		{
 			found_word = str;
-			for (; str[a] != ' ' && str[a] != '\0';)
+			for (; *str != ' ' && *str != '\0';)
 			{
 				length++;
 				str++;
