@@ -3,9 +3,10 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * calloc - function that allocates memory for an array, using malloc
+ * @nmemb: number
+ * @size: size of
+ * Return: NULL if failed.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
