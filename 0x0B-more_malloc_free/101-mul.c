@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
 	if (argc < 3)
 	{
-		print_string("ERROR");
+		print_string("Error");
 		exit(98);
 	}
 	n1 = argv[1];
@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 	multi_res = _calloc(l1 + l2 + 1, sizeof(char *));
 	if (multi_res == 0)
 	{
-		print_string("ERROR");
+		print_string("Error");
 		exit (98);
 	}
 	for (a = 0; a < l1; a++)
