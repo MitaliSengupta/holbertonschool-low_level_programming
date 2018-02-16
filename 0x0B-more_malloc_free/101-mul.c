@@ -3,6 +3,78 @@
 #include <stdlib.h>
 
 /**
+ *
+ *
+ *
+ */
+int check_num(char *st)
+{
+	int a;
+
+	for (a = 0; st[a] !='\0'; a++)
+	{
+		if (st[a] < '0' || st[a] > '9')
+			return (0);
+	}
+	return (1);
+}
+/**
+ *
+ *
+ *
+ *
+ */
+unsigned int string_length(char *str)
+{
+	int a;
+
+	for (a = 0; str[a] != '\0'; a++)
+		a++;
+	return (a);
+}
+
+/**
+ *
+ *
+ *
+ */
+void print_string(char *st)
+{
+	while (*st == '\0')
+		st++;
+	if (*st == '\0')
+		_putchar('0');
+	while (*st == '0')
+		st++;
+	while (*st != '\0')
+	{
+		_putchar(*st);
+		st++;
+	}
+	_putchar('\n');
+}
+
+/**
+ *
+ *
+ *
+ */
+void *_calloc(unsigned int number, unsigned int size)
+{
+	char *p;
+	unsigned int a;
+
+	if (number == 0 || size == 0)
+		return (NULL);
+	p = malloc(number * size);
+	if (p == 0)
+		return (NULL);
+	for (a = 0; a < (number * size); a++)
+		p[a] = 0;
+	return (p);
+}
+
+/**
  * main - function to multiply
  * @argc: number of arguments passed
  * @argv: argument variables
@@ -10,8 +82,6 @@
  */
 int main(int argc, char **argv)
 {
-	int check_num(char *st);
-
 	char *n1, *n2, *multi_res;
 	int l = 0, l1 = 0, l2 = 0, a, b, t = 0, c = 0, ten = 0;
 
@@ -51,67 +121,4 @@ int main(int argc, char **argv)
 	print_string(multi_res);
 	free(multi_res);
 	return (0);
-}
-
-/**
- *
- *
- *
- */
-int check_num(char *st)
-{
-	int a;
-
-	for (a = 0; st[a] !='\0'; a++)
-	{
-		if (st[a] < '0' || st[a] > '9')
-			return (0);
-	}
-	return (1);
-}
-/**
- *
- *
- *
- *
- */
-unsigned int string_length(char *str)
-{
-	int a;
-
-	for (a = 0; str[a] != '\0'; a++)
-		a++;
-	return (a);
-}
-
-/**
- *
- *
- *
- */
-void print_string(char *st)
-{
-	int a;
-
-	_putchar('\n');
-}
-
-/**
- *
- *
- *
- */
-void *_calloc(unsigned int number, unsigned int size)
-{
-	char *p;
-	unsigned int a;
-
-	if (number == 0 || size == 0)
-		return (NULL);
-	p = malloc(number * size);
-	if (p == 0)
-		return (NULL);
-	for (a = 0; a < (number * size); a++)
-		p[a] = 0;
-	return (p);
 }
