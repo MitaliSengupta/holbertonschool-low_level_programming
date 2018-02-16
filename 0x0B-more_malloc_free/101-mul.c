@@ -3,12 +3,15 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
+ * main - function to multiply
+ * @argc: number of arguments passed
+ * @argv: argument variables
+ * Return: Always zero
  */
 int main(int argc, char **argv)
 {
+	int check_num(char *st);
+
 	char *n1, *n2, *multi_res;
 	int l = 0, l1 = 0, l2 = 0, a, b, t = 0, c = 0, ten = 0;
 
@@ -19,7 +22,7 @@ int main(int argc, char **argv)
 	}
 	n1 = argv[1];
 	n2 = argv[2];
-	if(!(check_number(n1) && check_number(n2)))
+	if(!(check_num(n1) && check_num(n2)))
 	{
 		print_string("Error");
 		exit(98);
@@ -55,19 +58,17 @@ int main(int argc, char **argv)
  *
  *
  */
-
-int check_number(char *s)
+int check_num(char *st)
 {
 	int a;
 
-	for (a = 0; s[a] != '\0'; a++)
+	for (a = 0; st[a] !='\0'; a++)
 	{
-		if (s[a] < '0' || s[a] > '9')
+		if (st[a] < '0' || st[a] > '9')
 			return (0);
 	}
 	return (1);
 }
-
 /**
  *
  *
@@ -92,14 +93,6 @@ void print_string(char *st)
 {
 	int a;
 
-	for (a = 0; st[a] == '\0' || st[a] == '0'; a++)
-		;
-	if (st == 0)
-		_putchar('0');
-	for (a = 0; st[a] != '\0'; a++)
-	{
-		_putchar(st[a]);
-	}
 	_putchar('\n');
 }
 
