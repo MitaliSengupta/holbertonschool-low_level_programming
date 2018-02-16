@@ -3,15 +3,15 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
+ * check_num - function to check the string for number
+ * @st: string being passed
+ * Return: 1 for number 0 for not
  */
 int check_num(char *st)
 {
 	int a;
 
-	for (a = 0; st[a] !='\0'; a++)
+	for (a = 0; st[a] != '\0'; a++)
 	{
 		if (st[a] < '0' || st[a] > '9')
 			return (0);
@@ -19,9 +19,9 @@ int check_num(char *st)
 	return (1);
 }
 /**
- *
- *
- *
+ * string_length - calculating string length
+ * @str: string to check
+ * Return: count
  *
  */
 unsigned int string_length(char *str)
@@ -34,9 +34,9 @@ unsigned int string_length(char *str)
 }
 
 /**
- *
- *
- *
+ * print_string - function to print string
+ * @st: string to print
+ * Return: none
  */
 void print_string(char *st)
 {
@@ -55,9 +55,10 @@ void print_string(char *st)
 }
 
 /**
- *
- *
- *
+ * _calloc - function for memory
+ * @number: the number
+ * @size: the size
+ * Return: pointer to memory
  */
 void *_calloc(unsigned int number, unsigned int size)
 {
@@ -83,7 +84,7 @@ void *_calloc(unsigned int number, unsigned int size)
 int main(int argc, char **argv)
 {
 	char *n1, *n2, *multi_res;
-	int l = 0, l1 = 0, l2 = 0, a, b, t = 0, c = 0, ten = 0;
+	unsigned int l = 0, l1 = 0, l2 = 0, a, b, t = 0, c = 0, ten = 0;
 
 	if (argc < 3)
 	{
@@ -92,7 +93,7 @@ int main(int argc, char **argv)
 	}
 	n1 = argv[1];
 	n2 = argv[2];
-	if(!(check_num(n1) && check_num(n2)))
+	if (!(check_num(n1) && check_num(n2)))
 	{
 		print_string("Error");
 		exit(98);
@@ -111,6 +112,7 @@ int main(int argc, char **argv)
 		for (c = 0, b = 0; b < l2; b++)
 		{
 			t = (n1[l1 - a - 1] - '0') * (n2[l2 - b - 1] - '0') + c;
+			printf("%u\n", t);
 			if (multi_res[l - b - ten - 1] > 0)
 				t = t + multi_res[l - b - ten - 1] - '0';
 			multi_res[l - b - ten - 1] = t % 10 + '0';
