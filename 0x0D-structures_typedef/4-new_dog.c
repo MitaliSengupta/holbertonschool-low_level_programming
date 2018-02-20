@@ -30,6 +30,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (doggo->name == 0)
 	{
 		free(doggo->name);
+		free(dog_t);
 		return (NULL);
 	}
 	for (c = 0; c < a; c++)
@@ -40,6 +41,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (doggo->owner == 0)
 	{
 		free(doggo->owner);
+		free(doggo->name);
+		free(doggo);
 		return (NULL);
 	}
 	for (c = 0; c < b; c++)
