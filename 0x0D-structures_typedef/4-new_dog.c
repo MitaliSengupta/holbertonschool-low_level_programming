@@ -3,8 +3,10 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * new_dog - function that creates a new dog.
+ * @name: character pointer
+ * @owner: character pointer
+ * @age: integer
  * Return: Always 0.
  */
 dog_t *new_dog(char *name, float age, char *owner)
@@ -20,7 +22,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (doggo == 0)
 		return (NULL);
-	doggo->name = malloc( a * sizeof(name));
+	doggo->name = malloc(a * sizeof(doggo->name));
 	if (doggo == 0)
 		return (NULL);
 	for (c = 0; c < a; c++)
@@ -29,7 +31,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	doggo->name[c] = '\0';
 	doggo->age = age;
-	doggo->owner = malloc(b * sizeof(owner));
+	doggo->owner = malloc(b * sizeof(doggo->owner));
 	if (doggo == 0)
 		return (NULL);
 	for (c = 0; c < b; c++)
