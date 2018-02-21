@@ -24,7 +24,7 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mult - multiplication function
+ * op_mul - multiplication function
  * @a: first integer value
  * @b: second integer value
  * Return: multiplication result

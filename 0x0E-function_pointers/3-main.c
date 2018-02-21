@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
- *
+ * main - function
+ * @argc: number of arguments
+ * @argv: argument variables passed
+ * Return: Always 0 for sucess
  */
 int main(int argc, char **argv)
 {

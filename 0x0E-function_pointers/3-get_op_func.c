@@ -2,9 +2,9 @@
 #include "3-calc.h"
 
 /**
- *
- *
- *
+ * get_op_func - a pointer to the function that corresponds to the op as a parm
+ * @s: operator passed as argument
+ * Return: Always 0 for sucess
  */
 int (*get_op_func(char *s))(int, int)
 {
