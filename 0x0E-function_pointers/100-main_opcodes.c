@@ -3,8 +3,8 @@
 
 /**
  * main - function to print its own opcode
- * @argc - number of arguments
- * @argv - argument variables passed
+ * @argc: number of arguments
+ * @argv: argument variables passed
  * Return: Always 0/
  */
 int main(int argc, char **argv)
