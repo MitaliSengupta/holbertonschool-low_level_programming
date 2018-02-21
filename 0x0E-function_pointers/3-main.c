@@ -18,11 +18,6 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[1][2] != '\0')
-	{
-		printf("Error\n");
-		exit(99);
-	}
 	res = get_op_func(argv[2]);
 	if (res == 0)
 	{
