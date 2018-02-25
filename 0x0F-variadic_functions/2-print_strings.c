@@ -10,8 +10,8 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	unsigned int a;
 	va_list list;
+	unsigned int a;
 	char *str;
 
 	va_start(list, n);
@@ -20,7 +20,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		str = va_arg(list, char *);
 		if (str == NULL)
 			printf("(nil)");
-		printf("%s", str);
+		else
+			printf("%s", str);
 		if ((a != n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
