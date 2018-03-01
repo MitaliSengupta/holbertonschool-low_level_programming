@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- *
- *
+ * priority - function that prints before main executes
+ * Return: void
  */
 void __attribute__((constructor)) priority()
 {
