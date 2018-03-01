@@ -1,13 +1,13 @@
-##Singly Linked Lists
+# Singly Linked Lists
 
-#What you should learn from this project
+## What you should learn from this project
 
 At the end of this project you are expected to be able to explain to anyone, without the help of Google:
 
 - When and why using linked lists vs arrays
 - How to build and use linked lists
 
-#Requirements
+## Requirements
 - Allowed editors: vi, vim, emacs
 - All your files will be compiled on Ubuntu 14.04 LTS
 - Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
@@ -24,10 +24,11 @@ At the end of this project you are expected to be able to explain to anyone, wit
 - Don’t forget to push your header file
 - All your header files should be include guarded
 - Please this data structure for this project:
+```c
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
- * @len: length of the string
+ * *@len: length of the string
  * @next: points to the next node
  * Description: singly linked list node structure
  * for Holberton project
@@ -38,3 +39,4 @@ typedef struct list_s
     unsigned int len;
     struct list_s *next;
 } list_t;
+```
