@@ -10,10 +10,9 @@ size_t free_listint_safe(listint_t **h)
 	size_t count_new = 0, count_comp = 0;
 	listint_t *tmp, *head, *comp;
 
-	if (h == NULL || *h == NULL)
+	if (h == NULL)
 		return (0);
 	head = comp = tmp = *h;
-
 	while (head != NULL)
 	{
 		comp = *h;
