@@ -30,7 +30,7 @@ size_t free_listint_safe(listint_t **h)
 		}
 		count_new++;
 		tmp = head->next;
-		free((void*)head);
+		free((void *)head);
 		head = tmp;
 	}
 	*h = tmp;
