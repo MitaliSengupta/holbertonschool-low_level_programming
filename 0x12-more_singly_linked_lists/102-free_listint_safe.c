@@ -10,12 +10,14 @@ size_t free_listint_safe(listint_t **h)
 	size_t count_new = 0, count_comp = 0;
 	listint_t *tmp, *head, *comp;
 
-	if (h == NULL)
+	if (h == NULL || *h == NULL)
 		return (0);
 	head = comp = tmp = *h;
+	count_new = 0;
 	while (head != NULL)
 	{
 		comp = *h;
+		count_comp = 0;
 		while (count_new > count_comp)
 		{
 			if (tmp == comp)
@@ -26,13 +28,11 @@ size_t free_listint_safe(listint_t **h)
 			count_comp++;
 			comp = comp->next;
 		}
-		count_comp = 0;
 		count_new++;
 		tmp = head->next;
-		free(head);
+		free((void*)head);
 		head = tmp;
 	}
-	count_new = 0;
-	*h = NULL;
+	*h = tmp;
 	return (count_new);
 }
