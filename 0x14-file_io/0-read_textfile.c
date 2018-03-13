@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
- *
+ * read_textfile - function to read and print text file to stdout
+ * @filename: ptr to the file to read and print
+ * @letters: number of bytes to print
+ * Return: 0 if failed else number of bytes printed
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -33,7 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (output == -1 || output != reader)
 		return (0);
 
-        close(fd);
+	close(fd);
 	free(buff);
 	return (output);
 }
