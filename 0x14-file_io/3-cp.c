@@ -15,6 +15,10 @@ int main(int argc, char **argv)
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	input = open(argv[1], O_RDONLY);
+	if (argv[1] == NULL)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n". argv[1]), exit(98);
+	if (argv[2] == NULL)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	if (input == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 	output = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
