@@ -7,6 +7,7 @@
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <stdarg.h>
 #define BUFFSIZE 1024
 
 int _putchar(char c);
