@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- *
- *
- *
- *
+ * add_dnodeint_end - add node to the end of  the list
+ * @head: double ptr to the head of the list
+ * @n: data
+ * Return: address to the new node
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
@@ -29,7 +29,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	}
 	old = *head;
 
-	for(;old->next != NULL;)
+	for (; old->next != NULL;)
 	{
 		old = old->next;
 	}
