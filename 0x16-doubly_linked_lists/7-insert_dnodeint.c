@@ -1,11 +1,11 @@
 #include "lists.h"
 
 /**
- *
- *
- *
- *
- *
+ * insert_dnodeint_at_index - func to insert node at index
+ * @h: double ptr to the beginning of the list
+ * @idx: index at which to add
+ * @n: data to be added
+ * Return: address of the new node or NULL
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -16,13 +16,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 
 	if (idx == 0)
-		return(add_dnodeint(h, n));
+		return (add_dnodeint(h, n));
 
-	for (a = 0, old = *h; old != NULL && a < idx; a++)
+	old = *h;
+
+	for (a = 0; old != NULL && a < idx; a++)
 		old = old->next;
 
 	if (old == NULL && a == idx)
-		return(add_dnodeint_end(h, n));
+		return (add_dnodeint_end(h, n));
 
 	else if (old != NULL)
 	{
