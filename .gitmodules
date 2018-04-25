@@ -1,3 +1,0 @@
-[submodule "0x18-stacks_queues_lifo_fifo/monty"]
-	path = 0x18-stacks_queues_lifo_fifo/monty
-	url = git@github.com:MitaliSengupta/monty.git
