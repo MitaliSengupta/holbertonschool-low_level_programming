@@ -1,10 +1,10 @@
 #include "sort.h"
 
 /**
- *
- *
- *
- *
+ * merge_sort - function to call division of merge function recursively
+ * @array: array to be sorted
+ * @size: size of the array
+ * Return: void
  */
 void merge_sort(int *array, size_t size)
 {
@@ -22,11 +22,12 @@ void merge_sort(int *array, size_t size)
 }
 
 /**
- *
- *
- *
- *
- *
+ * merge_rec - recursion part of the merge sort
+ * @array: array to be sorted
+ * @tmp: temporary array to store sorted elements
+ * @left: left index of array to sort
+ * @right: right index of array to sort
+ * Return: void
  */
 void merge_rec(int *array, int *tmp, size_t left, size_t right)
 {
@@ -66,11 +67,12 @@ void merge_rec(int *array, int *tmp, size_t left, size_t right)
 }
 
 /**
- *
- *
- *
- *
- *
+ * print - print function to print arrays
+ * @array: array to be printed
+ * @order: order of array to be printed
+ * @left: left index to print
+ * @right: right index to print
+ * Return: void
  */
 void print(int *array, char *order, size_t left, size_t right)
 {
