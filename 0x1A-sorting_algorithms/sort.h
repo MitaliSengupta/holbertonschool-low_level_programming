@@ -30,5 +30,11 @@ void swap(int *a, int *b);
 void merge_sort(int *array, size_t size);
 void merge_rec(int *array, int *tmp, size_t left, size_t right);
 void print(int *array, char *order, size_t left, size_t right);
+void heap_sort(int *array, size_t size);
+void heap(int *array, size_t size, size_t last);
+void child(int *array, size_t size, size_t last, size_t max);
+void max_heap(int *array, size_t size);
+void swap_heap(int *array, size_t a, size_t b);
+
 
 #endif
