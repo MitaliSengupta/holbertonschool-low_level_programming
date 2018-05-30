@@ -35,6 +35,6 @@ void heap(int *array, size_t size, size_t last);
 void child(int *array, size_t size, size_t last, size_t max);
 void max_heap(int *array, size_t size);
 void swap_heap(int *array, size_t a, size_t b);
-
+void counting_sort(int *array, size_t size);
 
 #endif
