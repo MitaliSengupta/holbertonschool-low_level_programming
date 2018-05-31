@@ -33,13 +33,13 @@ void csort(int *array, size_t size, int div)
 	size_t n, i, digit, prevcount, count[NUM];
 	int *new;
 
+	for (i = 0; i < NUM; i++)
+		count[i] = 0;
+
 	new = malloc(sizeof(int) * size);
 
 	if (new == NULL)
 		return;
-
-	for (i = 0; i < NUM; i++)
-		count[i] = 0;
 
 	for (n = 0; n < size; n++)
 	{
@@ -51,15 +51,14 @@ void csort(int *array, size_t size, int div)
 		prevcount = count[n - 1];
 		count[n] = prevcount + count[n];
 	}
+
 	for (n = size; n > 0; n--)
 	{
 		digit = (array[n - 1] / div) % 10;
 		new[count[digit] - 1] = array[n - 1];
 		count[digit]--;
 	}
-	for (n = 0; n < size; n++)
-		array[n] = new[n];
-	for (n = 0; n < NUM; n++)
-		count[n] = 0;
+	for (i = 0; i < size; i++)
+		array[i] = new[i];
 	free(new);
 }
