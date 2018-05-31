@@ -31,9 +31,9 @@ void radix_sort(int *array, size_t size)
 void csort(int *array, size_t size, int div)
 {
 	size_t i, digit, prevcount, dig;
-	int *new, n, count[NUM];
+	int *new, n, count[10];
 
-	for (i = 0; i < NUM; i++)
+	for (i = 0; i < 10; i++)
 		count[i] = 0;
 
 	new = malloc(sizeof(int) * size);
