@@ -30,8 +30,8 @@ void radix_sort(int *array, size_t size)
  */
 void csort(int *array, size_t size, int div)
 {
-	size_t i, digit, prevcount, dig;
-	int *new, n, count[10];
+	size_t i, digit, prevcount;
+	int *new, n, count[10], dig;
 
 	for (i = 0; i < 10; i++)
 		count[i] = 0;
