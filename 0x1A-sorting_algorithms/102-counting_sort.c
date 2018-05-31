@@ -1,10 +1,10 @@
 #include "sort.h"
 
 /**
- *
- *
- *
- *
+ * counting_sort - function to sort arrays using counting sort
+ * @array: array to be sorted
+ * @size: size of the array
+ * Return: void
  */
 void counting_sort(int *array, size_t size)
 {

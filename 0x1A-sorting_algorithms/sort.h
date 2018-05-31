@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#define NUM 10
 
 /**
  * struct listint_s - Doubly linked list node
@@ -17,6 +18,7 @@ typedef struct listint_s
 	struct listint_s *prev;
 	struct listint_s *next;
 } listint_t;
+
 
 void print_list(const listint_t *list);
 void print_array(const int *array, size_t size);
@@ -36,5 +38,8 @@ void child(int *array, size_t size, size_t last, size_t max);
 void max_heap(int *array, size_t size);
 void swap_heap(int *array, size_t a, size_t b);
 void counting_sort(int *array, size_t size);
+void radix_sort(int *array, size_t size);
+void csort(int *array, size_t size, int div);
+void shell_sort(int *array, size_t size);
 
 #endif
