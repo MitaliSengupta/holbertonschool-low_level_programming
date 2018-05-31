@@ -8,11 +8,18 @@
  */
 void radix_sort(int *array, size_t size)
 {
-	size_t i, dig;
+	size_t i;
+	int dig;
 
-	if (array == NULL || size <= 1)
+	if (array == NULL || size == 1)
 		return;
 	dig = array[0];
+
+	for (i = 0; i < size; i++)
+	{
+		if (array[i] > dig)
+			dig = array[i];
+	}
 
 	for (i = 1; dig / i > 0; i = i * 10)
 	{
