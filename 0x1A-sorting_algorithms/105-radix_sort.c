@@ -30,7 +30,7 @@ void radix_sort(int *array, size_t size)
  */
 void csort(int *array, size_t size, int div)
 {
-	size_t i, digit, prevcount;
+	size_t i, digit, prevcount, dig;
 	int *new, n, count[NUM];
 
 	for (i = 0; i < NUM; i++)
@@ -49,17 +49,17 @@ void csort(int *array, size_t size, int div)
 		digit = (array[i] / div) % 10;
 		count[digit]++;
 	}
-	for (i = 1; i < NUM; i++)
+	for (i = 1; i < 10; i++)
 	{
 		prevcount = count[i - 1];
-		count[i] = prevcount + count[i];
+		count[i] += prevcount;
 	}
 
 	for (n = size - 1; n >= 0; n--)
 	{
-		digit = (new[n] / div) % 10;
-		array[count[digit] - 1] = new[n];
-		count[digit]--;
+		dig = (new[n] / div) % 10;
+		array[count[dig] - 1] = new[n];
+		count[dig]--;
 	}
 	free(new);
 }
