@@ -17,5 +17,4 @@
     - Grid cells are connected horizontally/vertically (not diagonally).
     - Grid is rectangular, width and height don’t exceed 100
   - grid is completely surrounded by water and there is one island or nothing
-  - island doesn't have lakes
-  
+  - island doesn't have lakes.
