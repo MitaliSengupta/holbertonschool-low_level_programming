@@ -64,7 +64,8 @@ The first project out of many to learn and understand deeply how C programming w
 <p align="center">
 <img src="https://cdn-images-1.medium.com/max/1600/1*bsRSU7E8DLXq0rs5o7SF0w.jpeg" width=100% height=100% />
 </p>
-[Learning C: What happens why you type gcc main.c](https://medium.com/@mitali.s.auger/learning-c-what-happens-when-you-type-gcc-main-c-ff4693178fc4)
+
+[Medium Article](https://medium.com/@mitali.s.auger/learning-c-what-happens-when-you-type-gcc-main-c-ff4693178fc4)
 
 - Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
   - The C file name will be saved in the variable $CFILE.
