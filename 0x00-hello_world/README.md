@@ -99,7 +99,7 @@ The first project out of many to learn and understand deeply how C programming w
 ### Technologies Used
 * Language: C
 * Operating System: Ubuntu 14.04 LTS (Trusty64)
-* Style: [Betty]()
+* Style: [Betty](https://github.com/holbertonschool/Betty)
 * Compiler: GCC
 ---
 
