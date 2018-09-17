@@ -8,6 +8,8 @@
 
 The first project out of many to learn and understand deeply how C programming works. Learning and applying C concepts to solidify understanding of the language.
 
+---
+
 ### Project Takeaways
 
 - Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
@@ -23,6 +25,8 @@ The first project out of many to learn and understand deeply how C programming w
 - What is the official Holberton C coding style and how to check your code with betty-style
 - How to find the right header to include in your source code when using a standard library function
 - How does the main function influence the return value of the program
+
+---
 
 ### Tasks
 
